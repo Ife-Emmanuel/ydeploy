@@ -1,0 +1,40 @@
+/* Styling for the article list */
+.container{
+    display:flex;
+    flex-direction: column;
+}
+
+.top{
+    display:flex;
+    flex-direction: row;
+    /* width: 95%;
+    margin: 50px; */
+}
+
+.left{
+    width: 95%;
+}
+
+
+/* styling for the horizontal lines after each article */
+.hrclass {
+    background-color: green;
+  }
+
+  /* Styling for the top of the update form */
+.form-wrapper{
+    display:flex;
+    flex-direction: row;
+}
+
+.top-left{
+    width: 95%;
+}
+
+/* Some added styles for the navbar section */
+
+.nav-flex{
+    display: flex;
+    flex-direction: row;
+}
+

@@ -1,0 +1,63 @@
+.App {
+  min-height : 100vh;
+  background-color: #282c34;
+  /* background-color:rgb(66, 65, 98); */
+  color: white;
+  padding : 20px;
+}
+
+.App-nav {
+  background-color: #282c34;
+  /* background-color:rgb(66, 65, 98); */
+  color: white;
+  padding : 20px;
+}
+
+/* styling to modify the Form(float to the right); I got from react-bootstrap website navbar examples */
+/* .form-right {
+  float:"left"!important;
+} */
+/* horizontal line that appears after each article in the listing */
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* .App {
+  min-height : 100vh;
+  background-color: #282c34;
+  color: white;
+  padding : 20px;
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.hrclass {
+  background-color: red;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
