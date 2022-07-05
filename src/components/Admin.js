@@ -8,6 +8,7 @@ import Icon from './icons';
 import {MdOutlineMail} from 'react-icons/md'
 import {useCookies} from 'react-cookie'; 
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../containers/Navbar';
 
 function Admin() {
 
@@ -21,6 +22,8 @@ function Admin() {
     }
 
   return (
+    <>
+    <Navbar/>
     <div className='App'>
         <div className='top'>
             <div className='left'>
@@ -57,6 +60,8 @@ function Admin() {
             </div>
       </div>
     </div>
+    </>
+    
   )
 }
 

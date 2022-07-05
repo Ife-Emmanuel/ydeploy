@@ -9,7 +9,7 @@ import {TiGroup} from 'react-icons/ti'
 import {MdPostAdd} from 'react-icons/md'
 
 export function Navbar() {
-    const [token, setToken, removeToken] = useCookies(['mytoken'])
+    const [token, setToken, removeToken] = useCookies(['myToken'])
     const [admintoken, setAdminToken, removeAdminToken] = useCookies(['adminToken'])
 
     const navigate = useNavigate()
@@ -25,6 +25,15 @@ export function Navbar() {
                 // window.location.href = "/"
             }
             
+        } else {
+            if(token['mytoken']){
+                if(admintoken['adminToken']){
+                    // navigate('/Admin')
+                }
+                else{
+                    navigate('/articles')
+                }
+            }
         }
     }, [token])
     
@@ -44,6 +53,7 @@ export function Navbar() {
 
     const logOutBtn = () => {
         removeToken(['mytoken'])
+        navigate('/')
       }
 
     const createAdminToken = () => {
@@ -58,7 +68,7 @@ export function Navbar() {
             token['mytoken'] && 
             <>
                 <Icon.Provider href="/"><Icon.icon><FaHome/></Icon.icon>Home</Icon.Provider>
-                <Icon.Provider onClick={createInsertForm}><Icon.icon><MdPostAdd/></Icon.icon>New Article</Icon.Provider>
+                <Icon.Provider onClick={createInsertForm}><Icon.icon><MdPostAdd/></Icon.icon>Post</Icon.Provider>
             </>
         }
         
@@ -94,13 +104,16 @@ export function Navbar() {
                 <ul className={clicked ? 'nav-menu active' : 'nav-menu'}> 
               
                         <li>
-                            <Icon.Provider href="/Admin" onClick={createAdminToken}><Icon.icon><SiXdadevelopers/></Icon.icon>Administrator</Icon.Provider>
+                            <Icon.Link href="/Admin" onClick={createAdminToken}><Icon.Row><SiXdadevelopers/>Administrator</Icon.Row></Icon.Link>
+                            {/* <Icon.Provider ><Icon.icon><SiXdadevelopers/></Icon.icon>Administrator</Icon.Provider> */}
                         </li>
                         <li>
-                            <Icon.Provider onClick={getMembers}><Icon.icon><TiGroup/></Icon.icon>Members</Icon.Provider>
+                        <Icon.Link href="/Members"><Icon.Row><TiGroup/>Members</Icon.Row></Icon.Link>
+                            {/* <Icon.Provider onClick={getMembers}><Icon.icon><TiGroup/></Icon.icon>Members</Icon.Provider> */}
                         </li>
                         <li>
-                            <Icon.Provider onClick={logOutBtn}><Icon.icon><FaSignOutAlt/></Icon.icon>SignOut</Icon.Provider>
+                        <Icon.Link onClick={logOutBtn}><Icon.Row><FaSignOutAlt/>SignOut</Icon.Row></Icon.Link>
+                            {/* <Icon.Provider onClick={logOutBtn}><Icon.icon><FaSignOutAlt/></Icon.icon>SignOut</Icon.Provider> */}
                         </li>
                  
                         
@@ -114,44 +127,4 @@ export function Navbar() {
   )
 }
 
-export default Navbar
-
-
-
-
-// export class Navbar extends Component {
-//     state = {
-//         clicked: false
-//     }
-
-//     handleClick = () => {
-//         this.setState({clicked: !this.state.clicked})
-//     }
-
-//   render() {
-//     return (
-//       <nav className='NavbarItems'>
-//         <h1 className='navbar-logo'>React<i className='fab fa-react '></i></h1>
-//         <div className='menu-icon' onClick={this.handleClick}>
-//             <i className='fas fa-bars'></i>
-
-//         </div>
-//         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-//             {MenuItems.map((item, index)=>{
-//                 return (
-//                     <li key={index}>
-//                         <a className={item.cName} href={item.url}>
-//                             {item.title}
-//                         </a>
-//                     </li>
-//                 )
-//             })}
-           
-//         </ul>
-//         <Button>Sign Up</Button>
-//       </nav>
-//     )
-//   }
-// }
-
-// export default Navbar;
+export default Navbar;

@@ -3,6 +3,7 @@ import {CgProfile} from 'react-icons/cg'
 import '../App.css';
 import APIService from '../APIService';
 import '../Styles/AppStyles.css'
+import Navbar from '../containers/Navbar';
 
 
 function Members(props) {
@@ -16,7 +17,9 @@ function Members(props) {
     }, [])
 
   return (
-      <div className='App'>
+        <>
+        <Navbar/>
+        <div className='App'>
         <div>
             <h2>YBlog Members</h2>
         </div>
@@ -43,6 +46,8 @@ function Members(props) {
         }
       
       </div>
+        </>
+      
   )
 }
 

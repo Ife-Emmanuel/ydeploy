@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import APIService from '../APIService'
 import {useCookies} from 'react-cookie';
 import { Navigate, useNavigate } from 'react-router-dom';
+import Navbar from '../containers/Navbar';
 
 function InsertForm(props) {
 
@@ -37,6 +38,8 @@ function InsertForm(props) {
     
 
   return (
+    <>
+    <Navbar/>
     <div className='mb-3 App'>
             <br/>
             <h1>Add a new Article</h1>
@@ -55,6 +58,8 @@ function InsertForm(props) {
             
 
         </div>
+    </>
+    
   )
 }
 

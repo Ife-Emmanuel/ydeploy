@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom';
 import {ImWarning} from 'react-icons/im'
 import { toBeRequired } from '@testing-library/jest-dom/dist/matchers';
 import '../Styles/AppStyles.css';
+import Navbar from '../containers/Navbar';
 
 
 
@@ -46,6 +47,8 @@ function Login() {
 
 
   return (
+    <>
+    <Navbar/>
     <div className='App'>
         <br/>
         <br/>
@@ -73,6 +76,8 @@ function Login() {
         }
         </div>
     </div>
+    </>
+    
   )
 }
 

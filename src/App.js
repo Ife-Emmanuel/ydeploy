@@ -9,6 +9,7 @@ import {useCookies} from 'react-cookie';
 import {useNavigate} from 'react-router-dom';
 import {checkError} from './APIService';
 import { toBeRequired } from '@testing-library/jest-dom/dist/matchers';
+import Navbar from './containers/Navbar';
 
 
 
@@ -72,11 +73,15 @@ function App(){
   
 
   return (
+    <>
+    <Navbar/>
     <div className="App">
       <br/>
       <ArticlesList articles={articles} editArticle={editArticle} editBtn={editBtn} deleteBtn={deleteBtn} updatedInformation={updatedInformation} setEditNull={setEditNull}/>
 
     </div> 
+    </>
+    
   )
 }
 
