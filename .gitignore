@@ -11,7 +11,7 @@ __pycache__/
 .nvmrc
 /.pnp
 .pnp.js
-base.js
+Base.js
 # testing
 /coverage
 
