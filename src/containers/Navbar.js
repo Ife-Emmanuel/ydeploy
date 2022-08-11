@@ -75,7 +75,7 @@ export function Navbar() {
         {
             !token['mytoken'] && 
                 <div className='admin-show'>
-                    <Icon.Provider href="/Admin" onClick={createAdminToken}><Icon.icon><SiXdadevelopers/></Icon.icon>Administrator</Icon.Provider>
+                    <Icon.Provider href="/Admin-site" onClick={createAdminToken}><Icon.icon><SiXdadevelopers/></Icon.icon>Administrator</Icon.Provider>
                 </div>
         }
         
@@ -83,7 +83,7 @@ export function Navbar() {
             token['mytoken'] && 
             <>
                 <div className='nav-show'>
-                <Icon.Provider href="/Admin" onClick={createAdminToken}><Icon.icon><SiXdadevelopers/></Icon.icon>Administrator</Icon.Provider>
+                <Icon.Provider href="/Admin-site" onClick={createAdminToken}><Icon.icon><SiXdadevelopers/></Icon.icon>Administrator</Icon.Provider>
                 </div>
                 <div className='nav-show'>
                     <Icon.Provider onClick={getMembers}><Icon.icon><TiGroup/></Icon.icon>Members</Icon.Provider>
@@ -104,7 +104,7 @@ export function Navbar() {
                 <ul className={clicked ? 'nav-menu active' : 'nav-menu'}> 
               
                         <li>
-                            <Icon.Link href="/Admin" onClick={createAdminToken}><Icon.Row><SiXdadevelopers/>Administrator</Icon.Row></Icon.Link>
+                            <Icon.Link href="/Admin-site" onClick={createAdminToken}><Icon.Row><SiXdadevelopers/>Administrator</Icon.Row></Icon.Link>
                             {/* <Icon.Provider ><Icon.icon><SiXdadevelopers/></Icon.icon>Administrator</Icon.Provider> */}
                         </li>
                         <li>

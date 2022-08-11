@@ -95,7 +95,7 @@ function Router(){
                   <Route exact path="/articles" element={<App/>}/>
                   <Route exact path="/About" element={<About/>}/>
                   <Route exact path="/Members" element={<Members/>}/>
-                  <Route exact path="/Admin" element={<Admin/>}/>
+                  <Route exact path="/Admin-site" element={<Admin/>}/>
                   <Route exact path="/articles/InsertForm" element={<InsertForm/>}/>
                   <Route path="*" element={<ErrorPage/>}/>
                 </Routes>

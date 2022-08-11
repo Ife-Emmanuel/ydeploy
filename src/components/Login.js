@@ -32,7 +32,6 @@ function Login() {
         .catch(err=>{
             setShowInvalid(true)
         })
-
     }
 
     const registerBtn = () => {

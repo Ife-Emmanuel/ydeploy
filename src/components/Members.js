@@ -12,7 +12,9 @@ function Members(props) {
     useEffect(()=>{
         APIService.ListUsers()
         .then(resp => {
-            resp && setUsers(resp)})
+            resp && setUsers(resp);
+            console.log(resp);
+        })
         .catch(err=>{})
     }, [])
 

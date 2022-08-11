@@ -20,10 +20,10 @@ function App(){
   const [inSertForm, setInsertForm] = useState(false)
   const [token] = useCookies(['mytoken'])
   const navigate = useNavigate();
-  
+  const {REACT_APP_ADMINTOKEN, REACT_APP_ARTICLE_LIST, REACT_APP_API_AUTH_END, REACT_APP_API_USERS_END} = process.env;
 
   useEffect(()=>{
-    fetch('http://0.0.0.0:5000/api/articles/', {
+    fetch(REACT_APP_ARTICLE_LIST, {
       'method' : 'GET',
       headers : {
         'Content-Type' : 'application/json',
