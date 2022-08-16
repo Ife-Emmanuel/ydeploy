@@ -1,6 +1,7 @@
 from logging import BufferingFormatter
 from urllib import request
 from django.shortcuts import render, HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import Article
 from .serializers import ArticleSerializer, UserSerializer
 from django.views.decorators.csrf import csrf_exempt

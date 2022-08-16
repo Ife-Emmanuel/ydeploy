@@ -9,7 +9,7 @@ function InsertForm(props) {
     const [title, setTitle] = useState('')
     const [errmessage, seterrmessage] = useState(false)
     const [description, setDescription] = useState('')
-    const [insertClicked, setInsertClicked] = useState(false)
+    const [insertClicked, setInsertClicked] = useState('false')
     const [token, setToken] = useCookies('mytoken')
     const navigate = useNavigate()
     
@@ -23,17 +23,17 @@ function InsertForm(props) {
         APIService.InsertArticle({title, description}, token['mytoken'])
         .then(resp=>{})
         .catch(err=>{console.log(err)})
-        setInsertClicked(true)
+        setInsertClicked('true')
         // .then(resp=>props.insertedInformation(resp))
       }
         
     }
 
     useEffect(() => {
-          if(insertClicked){
+          if(insertClicked === 'true'){
             navigate('/articles/')
         }
-        setInsertClicked(false)
+        
     }, [insertClicked])
     
 
