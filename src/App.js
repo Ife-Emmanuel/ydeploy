@@ -20,10 +20,10 @@ function App(){
   const [inSertForm, setInsertForm] = useState(false)
   const [token] = useCookies(['mytoken'])
   const navigate = useNavigate();
-  const {REACT_APP_ADMINTOKEN, REACT_APP_ARTICLE_LIST, REACT_APP_API_AUTH_END, REACT_APP_API_USERS_END} = process.env;
+  const articleListUrl = process.env.REACT_APP_ARTICLE_LIST;
 
   useEffect(()=>{
-    fetch(REACT_APP_ARTICLE_LIST, {
+    fetch(articleListUrl, {
       'method' : 'GET',
       headers : {
         'Content-Type' : 'application/json',
@@ -91,4 +91,3 @@ export default App;
         editArticle ? <Form article={editArticle} updatedInformation={updatedInformation} insertedInformation={insertedInformation}/>: null
       } */}
       {/* <NewArticleList articles={articles} editBtn={editBtn} editArticle={editArticle} updatedInformation={updatedInformation}/> */}
-
